@@ -18,6 +18,7 @@ public class Fraction {
         this.denominateur = 1;
     }
 
+    @Override
     public String toString(){//overriding the toString() method
         return "Je suis une fraction.";
     }
@@ -48,6 +49,20 @@ public class Fraction {
         double sumFraction = this.getFractionDoubleVal() + FT.getFractionDoubleVal();
         assert sumFraction > 0;
         return sumFraction;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Fraction FT = (Fraction) o;
+        boolean isEqual = (numerateur == FT.numerateur && denominateur == FT.denominateur);
+        assert isEqual;
+        return isEqual;
     }
 
 }

@@ -9,9 +9,9 @@ public class Main {
 
         Fraction FT_1 = new Fraction(12, 9);
 
-        assert FT_1.getNumerateur() == 0 : "Le valeur du numérateur n'est pas 0";
+        // assert FT_1.getNumerateur() == 0 : "Le valeur du numérateur n'est pas 0";
         // assert FT_1.toString() == "Je suis";
 
-
+        System.out.println(maFraction.equals(FT_1));
     }
 }
