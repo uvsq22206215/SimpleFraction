@@ -44,7 +44,7 @@ public class Fraction {
         return x.doubleValue();
     }
 
-    public double addFractions(Fraction FT){
+    public double add(Fraction FT){
         double sumFraction = this.getFractionDoubleVal() + FT.getFractionDoubleVal();
         assert sumFraction > 0;
         return sumFraction;
