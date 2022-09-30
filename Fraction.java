@@ -37,4 +37,11 @@ public class Fraction {
     public void setDenominateur(int newDenom){
         this.denominateur = newDenom;
     }
+
+    public double getFractionDoubleVal(){
+        Number x = this.numerateur/this.denominateur;
+        assert x.intValue() <= this.numerateur;
+        return x.doubleValue();
+    }
+
 }
