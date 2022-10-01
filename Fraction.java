@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction extends Number implements Comparable {
 
     private int numerateur;
     private int denominateur;
@@ -63,6 +63,40 @@ public class Fraction {
         boolean isEqual = (numerateur == FT.numerateur && denominateur == FT.denominateur);
         assert isEqual;
         return isEqual;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Fraction FT = (Fraction) o;
+        if (this.getFractionDoubleVal() > FT.getFractionDoubleVal()) {
+            return 1;
+        }
+        else if(this.getFractionDoubleVal() < FT.getFractionDoubleVal()){
+            return -1;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    @Override
+    public int intValue() {
+        return (int) this.getFractionDoubleVal();
+    }
+
+    @Override
+    public long longValue() {
+        return (long)this.getFractionDoubleVal();
+    }
+
+    @Override
+    public float floatValue() {
+        return (float)this.getFractionDoubleVal();
+    }
+
+    @Override
+    public double doubleValue() {
+        return this.getFractionDoubleVal();
     }
 
 }
